@@ -15,7 +15,7 @@ public class DiscordNotifier {
 
     private final RestTemplate restTemplate;
 
-    @Value("{discord.webhook-url}")
+    @Value("${discord.webhook-url}")
     private String webhookUrl;
 
 

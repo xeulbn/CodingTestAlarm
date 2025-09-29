@@ -18,7 +18,7 @@ public class ScheduleService {
     private final DiscordNotifier notifier;
 
     private boolean isSkipDay() {
-        // 공휴일 외부API 체크
+        //TODO : 공휴일 외부API 체크
         LocalDate today = LocalDate.now();
         return false;
     }
@@ -31,7 +31,6 @@ public class ScheduleService {
 
     private void send(String message){
         if(!isAllowedDay() || isSkipDay()){
-            notifier.sendSimple(message);
             log.info("오늘은 코딩테스트 쉬는날입니다. 푹쉬고 앞으로 더 화이팅!!");
             return;
         }
