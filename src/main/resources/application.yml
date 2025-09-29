@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: coding-test-alarm
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:local}
+
+discord:
+  webhook-url: ${DISCORD_WEBHOOK_URL}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
